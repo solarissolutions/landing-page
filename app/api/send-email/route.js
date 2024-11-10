@@ -1,4 +1,7 @@
 import nodemailer from "nodemailer";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export async function POST(req) {
   const { name, position, company, email, phone, preferredTime, message } =
