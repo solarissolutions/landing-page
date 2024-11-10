@@ -20,6 +20,7 @@ export function LandingPageComponent() {
     { role: 'assistant', content: 'Olá! Como posso ajudar você hoje?' }
   ])
   const [inputMessage, setInputMessage] = useState('')
+  const [hasContactInfo, setHasContactInfo] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
@@ -29,16 +30,26 @@ export function LandingPageComponent() {
     setChatOpen(!chatOpen)
   }
 
-  const handleSendMessage = (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSendMessage = (e) => {
+    e.preventDefault();
+    
     if (inputMessage.trim()) {
-      setMessages([...messages, { role: 'user', content: inputMessage }])
-      setInputMessage('')
-      setTimeout(() => {
-        setMessages(prev => [...prev, { role: 'assistant', content: 'Obrigado por sua mensagem. Um de nossos consultores entrará em contato em breve.' }])
-      }, 1000)
+      setMessages([...messages, { role: 'user', content: inputMessage }]);
+  
+      if (!hasContactInfo) {
+        setTimeout(() => {
+          setMessages(prev => [...prev, { role: 'assistant', content: 'Por favor, informe um contato para que possamos continuar.' }]);
+          setHasContactInfo(true);
+        }, 1000);
+      } else {
+        setTimeout(() => {
+          setMessages(prev => [...prev, { role: 'assistant', content: 'Obrigado por sua mensagem. Um de nossos consultores entrará em contato em breve.' }]);
+        }, 1500);
+      }
+  
+      setInputMessage('');
     }
-  }
+  };
 
   const NavItems = () => (
     <>
@@ -60,7 +71,7 @@ export function LandingPageComponent() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between px-4 sm:px-6 md:px-10 lg:px-20">
+        <div className="container w-full max-w-full flex h-16 items-center justify-between px-4 sm:px-6 md:px-10 lg:px-20">
           <Link href="/" className="flex items-center space-x-2">
             <Image src="/logo.png" alt="Solaris Logo" width={32} height={32} />
             <span className="font-bold">Solaris</span>
@@ -299,7 +310,7 @@ export function LandingPageComponent() {
                       className="rounded-full mx-auto mb-4"
                     />
                     <h3 className="text-lg font-bold text-center">Felippe Oliveira</h3>
-                    <p className="text-sm text-muted-foreground text-center">Especialista em Bussines</p>
+                    <p className="text-sm text-muted-foreground text-center">Especialista em Business</p>
                   </CardContent>
                 </Card>
                 <Card>

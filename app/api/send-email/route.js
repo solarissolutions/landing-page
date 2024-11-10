@@ -8,16 +8,16 @@ export async function POST(req) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "solarishackathon@gmail.com",
-      pass: "SolarisHackathonUsp",
+      user: process.env.GMAIL_USER,
+      pass: process.env.GMAIL_PASS,
     },
   });
 
   try {
     // Enviar o email
     await transporter.sendMail({
-      from: "solarishackathon@gmail.com", // email remetente
-      to: "solarishackathon@gmail.com", // email destinatário
+      from: "solarishackathon@gmail.com",
+      to: "solarishackathon@gmail.com",
       subject: "Novo Contato do Formulário",
       text: `
         Nome: ${name}

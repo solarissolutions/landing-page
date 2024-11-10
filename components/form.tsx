@@ -23,6 +23,11 @@ export const Form = () => {
     setFormData({ ...formData, [name]: value })
   }
 
+  const handleSelectChange = (value: string) => {
+    setFormData({ ...formData, preferredTime: value })
+  }
+
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setFormStatus('Enviando...')
@@ -56,7 +61,7 @@ export const Form = () => {
           <Input name="company" placeholder="Empresa" value={formData.company} onChange={handleInputChange} required />
           <Input type="email" name="email" placeholder="E-mail" value={formData.email} onChange={handleInputChange} required />
           <Input type="tel" name="phone" placeholder="Telefone" value={formData.phone} onChange={handleInputChange} required />
-          <Select name="preferredTime" value={formData.preferredTime} required>
+          <Select name="preferredTime" value={formData.preferredTime}  onValueChange={handleSelectChange} required>
             <SelectTrigger>
               <SelectValue placeholder="Selecione o horário preferido para a reunião" />
             </SelectTrigger>
