@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
   { year: 2022, 'Consumo de Energia (TWh)': 400 },
@@ -8,7 +8,7 @@ const data = [
   { year: 2030, 'Consumo de Energia (TWh)': 1300 },
 ];
 
-export default function GlobalEnergyConsumo() {
+export default function GlobalEnergyConsumption() {
   return (
     <section className="w-full">
       <div className="container px-1 md:px-6">
@@ -20,8 +20,7 @@ export default function GlobalEnergyConsumo() {
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="year" label={{ value: 'Ano', position: 'bottom', offset: 10 }}/>
                   <YAxis label={{ value: 'Consumo', angle: -90, position: 'insideLeft', offset: -5 }}/>
-                  <Tooltip />
-                  <Legend verticalAlign="top" height={76} offset={10} className="hidden md:block" />
+                  <Legend verticalAlign="top" height={60} offset={10} className="hidden md:block" />
                   <Line type="monotone" dataKey='Consumo de Energia (TWh)' stroke="#FFB927" strokeWidth={2} />
                 </LineChart>
               </ResponsiveContainer>
