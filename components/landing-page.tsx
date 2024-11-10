@@ -3,15 +3,14 @@
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, BarChart, Menu, X, Mail, Phone, MapPin, MessageCircle, Send, LeafIcon, ChartLine, LineChart } from "lucide-react"
+import { CheckCircle, BarChart, Menu, X, Mail, Phone, MapPin, MessageCircle, Send, LeafIcon, LineChart } from "lucide-react"
 import GlobalEnergyConsumption from "@/components/graphic"
-import AITokenUsageComparison from "@/components/graphics-comparison"
+import DashboardInterface from "@/components/dashboard"
 import Image from "next/image"
 import Link from "next/link"
+import { Form } from './form'
 
 export function LandingPageComponent() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -104,7 +103,7 @@ export function LandingPageComponent() {
       )}
       <main className="flex-1 mr-10 ml-10">
         {/* Main content (unchanged) */}
-        <section id="solucao" className="w-full py-6 md:py-12 lg:py-20">
+        <section id="solucao" className="w-full py-6 md:py-12 lg:py-16">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
@@ -122,8 +121,10 @@ export function LandingPageComponent() {
             </div>
           </div>
         </section>
-        <AITokenUsageComparison/>
-        <section id="beneficios" className="w-full py-6 md:py-12 lg:py-16 pr-5 pl-5 bg-[#f8f8f8]">
+        <section id="dashboard" className="w-full py-6 md:py-12 lg:py-16">
+          <DashboardInterface/>
+        </section>
+        <section id="beneficios" className="w-full py-6 md:py-12 lg:py-16 pr-5 pl-5">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
               Por que escolher nossa Solução?
@@ -168,7 +169,7 @@ export function LandingPageComponent() {
             </div>
           </div>
         </section>
-        <section id="como-funciona" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="como-funciona" className="w-full py-6 md:py-12 lg:py-16">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
               Como Levamos a Sustentabilidade para Sua Empresa
@@ -218,7 +219,7 @@ export function LandingPageComponent() {
           </div>
         </section>
         
-        <section id="faq" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="faq" className="w-full py-6 md:py-12 lg:py-16">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">Perguntas Frequentes</h2>
             <Accordion type="single" collapsible className="w-full">
@@ -253,7 +254,7 @@ export function LandingPageComponent() {
             </Accordion>
           </div>
         </section>
-        <section id="sobre-nos" className="w-full py-6 md:py-12 lg:py-16 pr-5 pl-5 bg-[#f8f8f8]">
+        <section id="sobre-nos" className="w-full py-6 md:py-12 lg:py-16 pr-5 pl-5 bg-[#f8f8f8] rounded-xl">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
               Sobre a Solaris
@@ -325,37 +326,10 @@ export function LandingPageComponent() {
             </div>
           </div>
         </section>
-        <section id="agendar" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center">
-            Vamos Falar do Futuro Sustentável da Sua Empresa!
-            </h2>
-            <form className="grid gap-4 max-w-lg mx-auto">
-              <Input placeholder="Nome Completo" required />
-              <Input placeholder="Cargo" required />
-              <Input placeholder="Empresa" required />
-              <Input type="email" placeholder="E-mail" required />
-              <Input type="tel" placeholder="Telefone" required />
-              <Select>
-                <SelectTrigger>
-                  <SelectValue placeholder="Selecione o horário preferido para a reunião" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="manha">Manhã</SelectItem>
-                  <SelectItem value="tarde">Tarde</SelectItem>
-                  <SelectItem value="noite">Noite</SelectItem>
-                </SelectContent>
-              </Select>
-              <Textarea placeholder="Conte-nos sobre sua necessidade em sustentabilidade (opcional)" />
-              <Button type="submit" size="lg" className="bg-[#FFB927] hover:bg-[#E5A622] text-black">
-                Agendar Reunião
-              </Button>
-            </form>
-          </div>
-        </section>
+        <Form/>
       </main>
       <footer className="w-full py-6 bg-[#f8f8f8]">
-        <div className="container px-4 md:px-6 mr-10 ml-10">
+        <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
               <Link href="/" className="flex items-center space-x-2 mb-3">
