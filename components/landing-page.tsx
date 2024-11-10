@@ -30,7 +30,7 @@ export function LandingPageComponent() {
     setChatOpen(!chatOpen)
   }
 
-  const handleSendMessage = (e) => {
+  const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault();
     
     if (inputMessage.trim()) {
