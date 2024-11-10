@@ -88,15 +88,6 @@ export default function AITokenUsageComparison() {
             </CardContent>
           </Card>
         </div>
-        <div className="mt-12 text-center">
-          <p className="text-lg text-muted-foreground mb-4">
-            Nossos clientes experimentam, em média, uma redução de 40-60% no uso de tokens de IA, 
-            o que se traduz diretamente em economia de energia e custos.
-          </p>
-          <Button asChild size="lg" className="bg-[#FFB927] hover:bg-[#E5A622] text-black">
-            <Link href="#agendar">Descubra Como Podemos Otimizar Seu Uso de IA</Link>
-          </Button>
-        </div>
       </div>
     </section>
   )

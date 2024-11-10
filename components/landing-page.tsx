@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Users, BarChart, Menu, X, Mail, Phone, MapPin, MessageCircle, Send } from "lucide-react"
+import { CheckCircle, BarChart, Menu, X, Mail, Phone, MapPin, MessageCircle, Send, LeafIcon, ChartLine, LineChart } from "lucide-react"
 import GlobalEnergyConsumption from "@/components/graphic"
 import AITokenUsageComparison from "@/components/graphics-comparison"
 import Image from "next/image"
@@ -149,7 +149,7 @@ export function LandingPageComponent() {
               </Card>
               <Card>
                 <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
-                  <Users className="w-12 h-12 text-[#FFB927]" />
+                  <LeafIcon className="w-12 h-12 text-[#FFB927]" />
                   <h3 className="text-xl font-bold">Data Centers Verdes</h3>
                   <p className="text-sm text-muted-foreground">
                   Incentivo à transição para resfriamento líquido e outras tecnologias sustentáveis..
@@ -158,7 +158,7 @@ export function LandingPageComponent() {
               </Card>
               <Card>
                 <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
-                  <BarChart className="w-12 h-12 text-[#FFB927]" />
+                  <LineChart className="w-12 h-12 text-[#FFB927]" />
                   <h3 className="text-xl font-bold">Relatórios ESG</h3>
                   <p className="text-sm text-muted-foreground">
                    Relatórios mensais e trimestrais automáticos para apoio à conformidade ESG.
