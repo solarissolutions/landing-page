@@ -56,7 +56,7 @@ export const Form = () => {
           <Input name="company" placeholder="Empresa" value={formData.company} onChange={handleInputChange} required />
           <Input type="email" name="email" placeholder="E-mail" value={formData.email} onChange={handleInputChange} required />
           <Input type="tel" name="phone" placeholder="Telefone" value={formData.phone} onChange={handleInputChange} required />
-          <Select name="preferredTime" value={formData.preferredTime} onChange={handleInputChange} required>
+          <Select name="preferredTime" value={formData.preferredTime} required>
             <SelectTrigger>
               <SelectValue placeholder="Selecione o horário preferido para a reunião" />
             </SelectTrigger>
