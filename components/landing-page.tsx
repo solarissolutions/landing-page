@@ -93,10 +93,6 @@ export function LandingPageComponent() {
           >
             <div className="container flex flex-col h-full py-4">
               <div className="flex justify-between items-center mb-8">
-                <Link href="/" className="flex items-center space-x-2">
-                  <Image src="/logo.png" alt="Solaris Logo" width={32} height={32} />
-                  <span className="font-bold">Solaris</span>
-                </Link>
                 <button onClick={toggleMobileMenu} aria-label="Fechar menu">
                   <X className="h-6 w-6 text-[#FFB927]" />
                 </button>

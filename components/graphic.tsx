@@ -11,7 +11,7 @@ const data = [
 export default function GlobalEnergyConsumo() {
   return (
     <section className="w-full">
-      <div className="container px-4 md:px-6">
+      <div className="container px-1 md:px-6">
         <Card>
           <CardContent>
             <div className="h-[400px] w-full">
@@ -21,7 +21,7 @@ export default function GlobalEnergyConsumo() {
                   <XAxis dataKey="year" label={{ value: 'Ano', position: 'bottom', offset: 10 }}/>
                   <YAxis label={{ value: 'Consumo', angle: -90, position: 'insideLeft', offset: -5 }}/>
                   <Tooltip />
-                  <Legend verticalAlign="top" height={36} />
+                  <Legend verticalAlign="top" height={56} offset={10}/>
                   <Line type="monotone" dataKey='Consumo de Energia (TWh)' stroke="#FFB927" strokeWidth={2} />
                 </LineChart>
               </ResponsiveContainer>
