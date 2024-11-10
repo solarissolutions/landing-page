@@ -48,13 +48,10 @@ export function LandingPageComponent() {
       <Link href="#beneficios" className="text-sm font-medium hover:text-[#FFB927]">
         Benefícios
       </Link>
-      <Link href="#casos-de-sucesso" className="text-sm font-medium hover:text-[#FFB927]">
-        Casos de Sucesso
-      </Link>
       <Link href="#sobre-nos" className="text-sm font-medium hover:text-[#FFB927]">
         Sobre Nós
       </Link>
-      <Link href="#contato" className="text-sm font-medium hover:text-[#FFB927]">
+      <Link href="#agendar" className="text-sm font-medium hover:text-[#FFB927]">
         Contato
       </Link>
     </>
@@ -111,14 +108,13 @@ export function LandingPageComponent() {
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  IA Sustentável para Empresas Conscientes
+                2030: Ano de Emissão Recorde de CO₂ pela IA.
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Otimize seu consumo de energia com práticas de IA sustentável e alcance suas metas ESG sem comprometer a
-                  eficiência.
+                O uso descontrolado de IA nos leva a um futuro de desperdício e custos altos. Vai perder a oportunidade de sair na frente da concorrência?
                 </p>
                 <Button asChild size="lg" className="w-full sm:w-auto bg-[#FFB927] hover:bg-[#E5A622] text-black">
-                  <Link href="#agendar">Agende uma Reunião com um Consultor</Link>
+                  <Link href="#agendar">Fale com um Consultor</Link>
                 </Button>
               </div>
               <GlobalEnergyConsumption />
@@ -128,42 +124,42 @@ export function LandingPageComponent() {
         <section id="beneficios" className="w-full py-12 md:py-24 lg:py-32 bg-[#FFF8E7]">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
-              Por que escolher nossa consultoria em IA sustentável?
+              Por que escolher nossa Solução?
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               <Card>
                 <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                   <BarChart className="w-12 h-12 text-[#FFB927]" />
-                  <h3 className="text-xl font-bold">Reduza Custos com Consumo de Energia</h3>
+                  <h3 className="text-xl font-bold">Monitoramento de Consumo</h3>
                   <p className="text-sm text-muted-foreground">
-                    Otimização do uso de IA para cortar gastos desnecessários com energia.
+                  Controle detalhado dos níveis de consumo de energia e tokens
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                   <CheckCircle className="w-12 h-12 text-[#FFB927]" />
-                  <h3 className="text-xl font-bold">Alcance Metas ESG com Transparência</h3>
+                  <h3 className="text-xl font-bold">Otimização de Prompts</h3>
                   <p className="text-sm text-muted-foreground">
-                    Relatórios ESG personalizados para acompanhar e comunicar seu impacto ambiental.
+                  Redução de custos e impacto ambiental por meio de sugestões de uso eficiente.
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                   <Users className="w-12 h-12 text-[#FFB927]" />
-                  <h3 className="text-xl font-bold">Capacitação e Autonomia para Sua Equipe</h3>
+                  <h3 className="text-xl font-bold">Data Centers Verdes</h3>
                   <p className="text-sm text-muted-foreground">
-                    Treinamento prático para que sua equipe mantenha a sustentabilidade em IA.
+                  Incentivo à transição para resfriamento líquido e outras tecnologias sustentáveis..
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                   <BarChart className="w-12 h-12 text-[#FFB927]" />
-                  <h3 className="text-xl font-bold">Relatórios Detalhados de Impacto Ambiental</h3>
+                  <h3 className="text-xl font-bold">Relatórios ESG</h3>
                   <p className="text-sm text-muted-foreground">
-                    Estimativas de redução de pegada de carbono e benchmarks para comparação setorial.
+                   Relatórios mensais e trimestrais automáticos para apoio à conformidade ESG.
                   </p>
                 </CardContent>
               </Card>
@@ -181,19 +177,19 @@ export function LandingPageComponent() {
                   <div className="w-8 h-8 rounded-full bg-[#FFB927] text-black flex items-center justify-center">
                     1
                   </div>
-                  <h3 className="text-xl font-bold">Diagnóstico Inicial</h3>
+                  <h3 className="text-xl font-bold">Análise Inteligente de Dados</h3>
                 </div>
-                <p className="text-muted-foreground">Avaliamos seu consumo energético e identificamos áreas de melhoria.</p>
+                <p className="text-muted-foreground">Identificamos os principais pontos de consumo e desperdício.</p>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <div className="w-8 h-8 rounded-full bg-[#FFB927] text-black flex items-center justify-center">
                     2
                   </div>
-                  <h3 className="text-xl font-bold">Plano de Otimização Personalizado</h3>
+                  <h3 className="text-xl font-bold">Otimização de Processos com IA</h3>
                 </div>
                 <p className="text-muted-foreground">
-                  Criamos um plano de redução de consumo de energia com estratégias práticas.
+                Reduzimos o impacto ambiental da IA com estratégias eficazes
                 </p>
               </div>
               <div className="space-y-4">
@@ -201,92 +197,55 @@ export function LandingPageComponent() {
                   <div className="w-8 h-8 rounded-full bg-[#FFB927] text-black flex items-center justify-center">
                     3
                   </div>
-                  <h3 className="text-xl font-bold">Suporte e Capacitação</h3>
+                  <h3 className="text-xl font-bold">Relatórios Customizados de Sustentabilidade</h3>
                 </div>
-                <p className="text-muted-foreground">Oferecemos treinamento e guias de boas práticas para sua equipe.</p>
+                <p className="text-muted-foreground">Resultados claros e alinhados aos principais padrões ESG.</p>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <div className="w-8 h-8 rounded-full bg-[#FFB927] text-black flex items-center justify-center">
                     4
                   </div>
-                  <h3 className="text-xl font-bold">Relatórios e Monitoramento Contínuo</h3>
+                  <h3 className="text-xl font-bold">Acompanhamento Contínuo e Melhorias</h3>
                 </div>
                 <p className="text-muted-foreground">
-                  Geramos relatórios ESG e acompanhamos o progresso com revisões periódicas.
+                Monitoramento e ajustes contínuos para resultados consistentes.
                 </p>
               </div>
             </div>
           </div>
         </section>
-        <section id="casos-de-sucesso" className="w-full py-12 md:py-24 lg:py-32 bg-[#FFF8E7]">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
-              Empresas que já estão economizando com IA sustentável
-            </h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <Card>
-                <CardContent className="p-6">
-                  <blockquote className="text-lg font-semibold mb-4">
-                    "A consultoria nos ajudou a reduzir nosso consumo de energia em 30% em apenas 6 meses."
-                  </blockquote>
-                  <p className="text-sm text-muted-foreground">- Maria Silva, CEO da TechCorp</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6">
-                  <blockquote className="text-lg font-semibold mb-4">
-                    "Nossos relatórios ESG melhoraram significativamente, atraindo mais investidores."
-                  </blockquote>
-                  <p className="text-sm text-muted-foreground">- João Santos, CTO da GreenTech</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6">
-                  <blockquote className="text-lg font-semibold mb-4">
-                    "A capacitação da nossa equipe nos tornou autônomos na gestão de IA sustentável."
-                  </blockquote>
-                  <p className="text-sm text-muted-foreground">- Ana Oliveira, Diretora de Sustentabilidade da EcoSolutions</p>
-                </CardContent>
-              </Card>
-            </div>
-            <div className="mt-12 text-center">
-              <Button asChild size="lg" className="bg-[#FFB927] hover:bg-[#E5A622] text-black">
-                <Link href="#agendar">Veja Como Podemos Ajudar Sua Empresa</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
+        
         <section id="faq" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">Perguntas Frequentes</h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
-                <AccordionTrigger>Como funciona a análise inicial de consumo energético?</AccordionTrigger>
+                <AccordionTrigger>Como o serviço pode realmente reduzir o consumo de energia das operações de IA?</AccordionTrigger>
                 <AccordionContent>
-                  Nossa equipe realiza uma avaliação detalhada do seu consumo atual, identificando padrões e áreas de melhoria
-                  potencial. Utilizamos ferramentas avançadas de análise de dados para fornecer insights precisos.
+                Utilizamos estratégias de otimização, como a engenharia de prompt, para reduzir o número de interações e cálculos desnecessários nas operações de IA. Com menos processamento, o consumo de energia diminui, 
+                ajudando a reduzir custos e emissões de carbono sem comprometer a eficiência dos resultados.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger>Quanto tempo leva o processo de consultoria?</AccordionTrigger>
+                <AccordionTrigger>Os relatórios personalizados de sustentabilidade atendem às exigências de órgãos reguladores?</AccordionTrigger>
                 <AccordionContent>
-                  O tempo varia de acordo com o tamanho e complexidade da sua empresa, mas geralmente nosso processo inicial leva
-                  de 4 a 8 semanas. Após isso, oferecemos suporte contínuo e monitoramento.
+                Sim, nossos relatórios são alinhados aos principais padrões ESG globais e nacionais, facilitando o cumprimento das regulamentações ambientais. Eles são customizados para 
+                fornecer uma visão clara e detalhada dos avanços da sua empresa em sustentabilidade, com métricas que atendem às exigências de órgãos reguladores.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger>Minha empresa precisa estar em um setor específico para contratar o serviço?</AccordionTrigger>
+                <AccordionTrigger>É indicada para empresas que estão começando com iniciativas de sustentabilidade?</AccordionTrigger>
                 <AccordionContent>
-                  Não, nossa consultoria é adaptável a diversos setores. Temos experiência em indústrias variadas e
-                  personalizamos nossa abordagem para atender às necessidades específicas de cada cliente.
+                Absolutamente! Nosso serviço é estruturado para empresas em diferentes estágios de sustentabilidade, desde as que estão iniciando até as que buscam otimizar processos. 
+                Fornecemos uma análise inicial e um plano de ação personalizado para apoiar as metas e necessidades específicas da sua empresa, ajudando a construir uma base sólida para um futuro mais sustentável.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
-                <AccordionTrigger>Qual o custo estimado do serviço?</AccordionTrigger>
+                <AccordionTrigger>Quanto tempo leva para ver resultados práticos na redução de consumo e emissões?</AccordionTrigger>
                 <AccordionContent>
-                  O custo varia dependendo do escopo do projeto e das necessidades específicas da sua empresa. Oferecemos uma
-                  consulta inicial gratuita para avaliar suas necessidades e fornecer uma estimativa personalizada.
+                Os primeiros resultados podem ser observados em poucas semanas após a implementação das melhorias, com uma redução inicial de desperdícios. 
+                Para um impacto mais profundo e consistente, recomendamos um acompanhamento contínuo, que garantirá otimizações progressivas e alinhamento aos objetivos de sustentabilidade.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -295,13 +254,12 @@ export function LandingPageComponent() {
         <section id="sobre-nos" className="w-full py-12 md:py-24 lg:py-32 bg-[#FFF8E7]">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
-              Nossa Experiência em IA e Sustentabilidade
+              Sobre a Solaris
             </h2>
-            <div className="grid gap-6 lg:grid-cols-2">
+            <div className="grid gap-4 lg:grid-cols-2">
               <div>
                 <p className="text-lg text-muted-foreground mb-4">
-                  Com mais de uma década de experiência em IA e sustentabilidade, nossa equipe está comprometida em ajudar
-                  empresas a reduzir seu impacto ambiental enquanto otimizam suas operações.
+                Somos estudantes da Universidade de São Paulo, apaixonados por Inteligência Artificial e sustentabilidade. Acreditamos que o uso consciente da IA pode transformar o futuro das empresas, reduzindo desperdícios e promovendo eficiência. Essa união de tecnologia e responsabilidade ambiental é o que nos move.
                 </p>
                 <p className="text-lg text-muted-foreground">
                   Nosso compromisso com a inovação e a responsabilidade ambiental nos permite oferecer soluções de ponta que
@@ -312,27 +270,53 @@ export function LandingPageComponent() {
                 <Card>
                   <CardContent className="p-4">
                     <Image
-                      src="/logo.png"
+                      src="/davi.jpg"
                       alt="Foto do Consultor"
                       width={100}
                       height={100}
                       className="rounded-full mx-auto mb-4"
                     />
-                    <h3 className="text-lg font-bold text-center">Dr. Carlos Mendes</h3>
-                    <p className="text-sm text-muted-foreground text-center">Especialista em IA Sustentável</p>
+                    <h3 className="text-lg font-bold text-center">Davi Moura</h3>
+                    <p className="text-sm text-muted-foreground text-center">Especialista em Dados</p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardContent className="p-4">
                     <Image
-                      src="/logo.png"
+                      src="/felippe.jpg"
                       alt="Foto da Consultora"
                       width={100}
                       height={100}
                       className="rounded-full mx-auto mb-4"
                     />
-                    <h3 className="text-lg font-bold text-center">Dra. Lúcia Ferreira</h3>
-                    <p className="text-sm text-muted-foreground text-center">Especialista em Eficiência Energética</p>
+                    <h3 className="text-lg font-bold text-center">Felippe Oliveira</h3>
+                    <p className="text-sm text-muted-foreground text-center">Especialista em Bussines</p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-4">
+                    <Image
+                      src="/felipe.jpg"
+                      alt="Foto da Consultora"
+                      width={100}
+                      height={100}
+                      className="rounded-full mx-auto mb-4"
+                    />
+                    <h3 className="text-lg font-bold text-center">Felipe Gigante</h3>
+                    <p className="text-sm text-muted-foreground text-center">Especialista em I.A</p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-4">
+                    <Image
+                      src="/mateus.jpg"
+                      alt="Foto da Consultora"
+                      width={100}
+                      height={100}
+                      className="rounded-full mx-auto mb-4"
+                    />
+                    <h3 className="text-lg font-bold text-center">Mateus Cintra</h3>
+                    <p className="text-sm text-muted-foreground text-center">Especialista em Desenvolvimento</p>
                   </CardContent>
                 </Card>
               </div>
@@ -342,7 +326,7 @@ export function LandingPageComponent() {
         <section id="agendar" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center">
-              Vamos Conversar sobre o Futuro Sustentável da Sua Empresa
+            Vamos Falar do Futuro Sustentável da Sua Empresa!
             </h2>
             <form className="grid gap-4 max-w-lg mx-auto">
               <Input placeholder="Nome Completo" required />
@@ -362,7 +346,7 @@ export function LandingPageComponent() {
               </Select>
               <Textarea placeholder="Conte-nos sobre sua necessidade em sustentabilidade (opcional)" />
               <Button type="submit" size="lg" className="bg-[#FFB927] hover:bg-[#E5A622] text-black">
-                Agendar Reunião com um Consultor
+                Agendar Reunião
               </Button>
             </form>
           </div>
