@@ -63,7 +63,7 @@ export function LandingPageComponent() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
+        <div className="container flex h-16 items-center justify-between mr-10 ml-10">
           <Link href="/" className="flex items-center space-x-2">
             <Image src="/logo.png" alt="Solaris Logo" width={32} height={32} />
             <span className="font-bold">Solaris</span>
@@ -104,7 +104,7 @@ export function LandingPageComponent() {
           </div>
         </div>
       )}
-      <main className="flex-1">
+      <main className="flex-1 mr-10 ml-10">
         {/* Main content (unchanged) */}
         <section id="solucao" className="w-full py-12 md:py-24 lg:py-20">
           <div className="container px-4 md:px-6">
@@ -369,10 +369,10 @@ export function LandingPageComponent() {
         </section>
       </main>
       <footer className="w-full py-6 bg-[#FFF8E7]">
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 md:px-6 mr-10 ml-10">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
-              <Link href="/" className="flex items-center space-x-2">
+              <Link href="/" className="flex items-center space-x-2 mb-3">
                 <Image src="/logo.png" alt="Solaris Logo" width={40} height={40} className="text-[#FFB927]" />
                 <span className="font-bold">Solaris</span>
               </Link>
