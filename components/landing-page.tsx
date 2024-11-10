@@ -9,6 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Users, BarChart, Menu, X, Mail, Phone, MapPin, MessageCircle, Send } from "lucide-react"
 import GlobalEnergyConsumption from "@/components/graphic"
+import AITokenUsageComparison from "@/components/graphics-comparison"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -106,7 +107,7 @@ export function LandingPageComponent() {
       )}
       <main className="flex-1 mr-10 ml-10">
         {/* Main content (unchanged) */}
-        <section id="solucao" className="w-full py-12 md:py-24 lg:py-20">
+        <section id="solucao" className="w-full py-6 md:py-12 lg:py-20">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
@@ -125,7 +126,8 @@ export function LandingPageComponent() {
             </div>
           </div>
         </section>
-        <section id="beneficios" className="w-full py-12 md:py-24 lg:py-32 bg-[#FFF8E7]">
+        <AITokenUsageComparison/>
+        <section id="beneficios" className="w-full py-6 md:py-12 lg:py-16 pr-5 pl-5 bg-[#f8f8f8]">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
               Por que escolher nossa consultoria em IA sustentável?
@@ -219,7 +221,7 @@ export function LandingPageComponent() {
             </div>
           </div>
         </section>
-        <section id="casos-de-sucesso" className="w-full py-12 md:py-24 lg:py-32 bg-[#FFF8E7]">
+        <section id="casos-de-sucesso" className="w-full py-6 md:py-12 lg:py-16 pr-5 pl-5 bg-[#f8f8f8]">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
               Empresas que já estão economizando com IA sustentável
@@ -228,7 +230,7 @@ export function LandingPageComponent() {
               <Card>
                 <CardContent className="p-6">
                   <blockquote className="text-lg font-semibold mb-4">
-                    "A consultoria nos ajudou a reduzir nosso consumo de energia em 30% em apenas 6 meses."
+                    A consultoria nos ajudou a reduzir nosso consumo de energia em 30% em apenas 6 meses.
                   </blockquote>
                   <p className="text-sm text-muted-foreground">- Maria Silva, CEO da TechCorp</p>
                 </CardContent>
@@ -236,7 +238,7 @@ export function LandingPageComponent() {
               <Card>
                 <CardContent className="p-6">
                   <blockquote className="text-lg font-semibold mb-4">
-                    "Nossos relatórios ESG melhoraram significativamente, atraindo mais investidores."
+                    Nossos relatórios ESG melhoraram significativamente, atraindo mais investidores.
                   </blockquote>
                   <p className="text-sm text-muted-foreground">- João Santos, CTO da GreenTech</p>
                 </CardContent>
@@ -244,7 +246,7 @@ export function LandingPageComponent() {
               <Card>
                 <CardContent className="p-6">
                   <blockquote className="text-lg font-semibold mb-4">
-                    "A capacitação da nossa equipe nos tornou autônomos na gestão de IA sustentável."
+                    A capacitação da nossa equipe nos tornou autônomos na gestão de IA sustentável.
                   </blockquote>
                   <p className="text-sm text-muted-foreground">- Ana Oliveira, Diretora de Sustentabilidade da EcoSolutions</p>
                 </CardContent>
@@ -292,7 +294,7 @@ export function LandingPageComponent() {
             </Accordion>
           </div>
         </section>
-        <section id="sobre-nos" className="w-full py-12 md:py-24 lg:py-32 bg-[#FFF8E7]">
+        <section id="sobre-nos" className="w-full py-6 md:py-12 lg:py-16 pr-5 pl-5 bg-[#f8f8f8]">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
               Nossa Experiência em IA e Sustentabilidade
@@ -368,7 +370,7 @@ export function LandingPageComponent() {
           </div>
         </section>
       </main>
-      <footer className="w-full py-6 bg-[#FFF8E7]">
+      <footer className="w-full py-6 bg-[#f8f8f8]">
         <div className="container px-4 md:px-6 mr-10 ml-10">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
