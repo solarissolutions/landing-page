@@ -11,6 +11,7 @@ import DashboardInterface from "@/components/dashboard"
 import Image from "next/image"
 import Link from "next/link"
 import { Form } from './form'
+import { motion, AnimatePresence } from 'framer-motion' // Import framer-motion
 
 export function LandingPageComponent() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -33,7 +34,6 @@ export function LandingPageComponent() {
     if (inputMessage.trim()) {
       setMessages([...messages, { role: 'user', content: inputMessage }])
       setInputMessage('')
-      // Simulate bot response (replace with actual API call in production)
       setTimeout(() => {
         setMessages(prev => [...prev, { role: 'assistant', content: 'Obrigado por sua mensagem. Um de nossos consultores entrará em contato em breve.' }])
       }, 1000)
@@ -60,7 +60,7 @@ export function LandingPageComponent() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between mr-10 ml-10">
+        <div className="container flex h-16 items-center justify-between px-4 sm:px-6 md:px-10 lg:px-20">
           <Link href="/" className="flex items-center space-x-2">
             <Image src="/logo.png" alt="Solaris Logo" width={32} height={32} />
             <span className="font-bold">Solaris</span>
@@ -80,28 +80,38 @@ export function LandingPageComponent() {
           </button>
         </div>
       </header>
-      {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-background md:hidden">
-          <div className="container flex flex-col h-full py-4">
-            <div className="flex justify-between items-center mb-8">
-              <Link href="/" className="flex items-center space-x-2">
-                <Image src="/logo.png" alt="Solaris Logo" width={32} height={32} />
-                <span className="font-bold">Solaris</span>
-              </Link>
-              <button onClick={toggleMobileMenu} aria-label="Fechar menu">
-                <X className="h-6 w-6 text-[#FFB927]" />
-              </button>
+      {/* Animação do menu móvel */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-50 bg-background md:hidden px-4 sm:px-6 md:px-10 lg:px-20"
+            style={{ zIndex: 1 }}
+          >
+            <div className="container flex flex-col h-full py-4">
+              <div className="flex justify-between items-center mb-8">
+                <Link href="/" className="flex items-center space-x-2">
+                  <Image src="/logo.png" alt="Solaris Logo" width={32} height={32} />
+                  <span className="font-bold">Solaris</span>
+                </Link>
+                <button onClick={toggleMobileMenu} aria-label="Fechar menu">
+                  <X className="h-6 w-6 text-[#FFB927]" />
+                </button>
+              </div>
+              <nav className="flex flex-col space-y-4">
+                <NavItems />
+              </nav>
+              <Button asChild className="mt-8 bg-[#FFB927] hover:bg-[#E5A622] text-black">
+                <Link href="#agendar" onClick={toggleMobileMenu}>Agende uma Reunião</Link>
+              </Button>
             </div>
-            <nav className="flex flex-col space-y-4">
-              <NavItems />
-            </nav>
-            <Button asChild className="mt-8 bg-[#FFB927] hover:bg-[#E5A622] text-black">
-              <Link href="#agendar" onClick={toggleMobileMenu}>Agende uma Reunião</Link>
-            </Button>
-          </div>
-        </div>
-      )}
-      <main className="flex-1 mr-10 ml-10">
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <main className="flex-1 px-4 sm:px-6 md:px-10 lg:px-20">
         {/* Main content (unchanged) */}
         <section id="solucao" className="w-full py-6 md:py-12 lg:py-16">
           <div className="container px-4 md:px-6">
